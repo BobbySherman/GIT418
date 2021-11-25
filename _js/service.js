@@ -1,5 +1,33 @@
+// ANCHOR: Module 6: CHAPTER 12 - JQUERY
+// NOTE: globale variable
+var quote = $("form .quote");
+
+// NOTE: button click event
+$("#btn_calc").click(function() {
+    // NOTE: store service value
+    var selectedService = $("form #selectService").val();
+    
+    // NOTE: store job size value
+    var jobSize = $("form input.radio:checked").val();
+
+    // NOTE:
+    //  if: no service selected add message and outline select field 
+    //  else: Multiply values in the html method + remove: message and outlione
+    if (selectedService === "") {
+        $("form .p-sub").after("<p class='userMsg'>Please select a service!</p>");
+        $("#selectService").addClass("outline");
+    } else {
+        quote.html(selectedService * jobSize);
+        $("form .userMsg").remove();
+        $("#selectService").removeClass("outline");
+    }
+});
+
+
+// ANCHOR: MODULES 2 + 4 
+/*
 // Global result variable
-var result = document.getElementById("quote");
+ var result = document.getElementById("quote");
 
 // Module 4 - Exception Handling
 // check if service is selected
@@ -19,7 +47,10 @@ function checkService() {
     catch(message) { // print throw message to quote id
         result.innerHTML = message; // assign message to result variable
     }
-}
+} 
+*/
+
+
 /* 
 Debugging Summary
 I used the console to set breakpoints. 
@@ -28,9 +59,11 @@ While stepping through the functions I watched the call stack, watch, and scope 
 */
 
 
-
 // module 2 - service page - Calculation
 // Btn click event + calculate quote function
+
+
+/* 
 function calcQuote() {
     // check for which radio btn is checked + apply value to "sizeTotal" variable
     var size = 0; // define size variable
@@ -81,3 +114,4 @@ function resetForm() {
 // Executes after browser window loads
 window.addEventListener("load", resetForm, false);
 window.addEventListener("load", createEventListeners,false);
+*/

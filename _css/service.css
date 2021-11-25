@@ -193,6 +193,18 @@ fieldset {
     font-weight: bold;
 }
 
+.userMsg {
+    color: red;
+    padding: 8px;
+    margin-top: 10px;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.outline {
+    border: 1.5px solid red;
+}
+
 /* footer */
 .footer {
     width: 100%;
