@@ -27,7 +27,7 @@ $("#btn_calc").click(function() {
 // ANCHOR: MODULES 2 + 4 
 /*
 // Global result variable
- var result = document.getElementById("quote");
+var result = document.getElementById("quote");
 
 // Module 4 - Exception Handling
 // check if service is selected
