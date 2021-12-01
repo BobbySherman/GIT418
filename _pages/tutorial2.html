@@ -60,19 +60,78 @@
             <article>
                 <h3>Linking the jQuery Library</h3>
                 <p class="note">To use jQuery we need to link the library to our HTML file</p>
+                <p class="steps">Copy the line of HTML below and add it to the bottom of the body tag - just before the current script tag - in the index.html file</p>
                 <pre>
                     <code class="html">
-
+                        &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
                     </code>
                 </pre>
-                <p class="steps">Step</p>
-                <p class="note">Note</p>   
+                <p class="note">This loads the jQuery library into our project! We need this libray to load before our script file.</p>
             </article>
 
             <article>
-                <h3>jQuery Selectors</h3>
-                <p class="note">Before we can animate an element, we need to know how to select an element.</p>                
+                <h3>Select and Animate Elements with Tag Names</h3>
+                <p class="steps">Before we can animate an element, we need to know how to select an element.</p>                
+                <p class="note">One of the advantages of jQuery is less typing and to start things off we'll look at the alias function!</p>
+                <p class="note">Remember: The double forward slash represents a comment in JavaScript code. I will use this to help clarify the code blocks from time to time.</p>   
+                <pre>
+                    <code class="javascript">
+                        // jQuery Function - The function below is the original function we use with jQuery
+                        jQuery();
+
+                        // Alias Function - We can use shorthand with the alias below to refer to the jQuery() function!
+                        $();
+                    </code>
+                </pre> 
+                <p class="steps">Open the index.html file in your browser and make note of the headings.</p>
+                <p class="note">Tip: use ctrl/cmd + o</p>  
+                <p class="steps">Open the index.html file in your editor and familiarize yourself with the sections.</p>     
+                <p class="steps">Open the script.js file in your editor and take note of the comments.</p>
+                <p class="steps">We have a few options to select a target with jQuery. The fist one we'll use is the HTML tag name.</p>
+                <p class="steps">Find the //SELECTORS comment in the script.js file and add the following alias and selector.</p>
+                <pre>
+                    <code class="javascript">
+                        // We place the HTML tag name inside the parenthesis with quotes.
+                        $("button");
+                    </code>
+                </pre>
+                <p class="steps">Next we'll add a click event to the function using the click() method.</p>
+                <pre>
+                    <code class="javascript">
+                        $("button").click();
+                    </code>
+                </pre>
+                <p class="steps">Now need to tell the click method to do something after the button is clicked.</p>   
+                <pre>
+                    <code class="javascript">
+                        $("button").click(function() {});
+                    </code>
+                </pre>
+                <p class="note">We are using an anonymous function to inside the click method. When we click the button, the statements in this function will fire.</p>   
+                <p class="steps">Now we need to select the rectangle we want to animate. Place a return inside the brackets and select the "div" element.</p>
+                <pre>
+                    <code class="javascript">
+                        $("button").click(function() {
+                            $("div");
+                        });
+                    </code>
+                </pre>
+                <p class="steps">To add animation we'll use the animate() method with a css left property to move the element to the right.</p>
+                <pre>
+                    <code class="javascript">
+                        $("button").click(function() {
+                            $("div").animate({left: "400px"});
+                        });
+                    </code>
+                </pre>
+                <p class="steps">Save the script.js file and return to your browser. Click the "Move Right" button.</p>   
+                <p class="note">Notice that all the rectangles moved to the right. This is because We used the tag as a selector. When we do this, we affect all the HTML elements in the document with that tag name.</p>   
+            </article>
+
+            <article>
+                <h3>Select and Animate Specific Elements</h3>
                 <p class="steps">Step</p>
+                <p class="note">Note</p>                
                 <pre>
                     <code class="javascript">
                         // function to validate form
@@ -80,12 +139,10 @@
                         }
                     </code>
                 </pre>
-                <p class="steps">Step</p>
-                <p class="note">Note</p>   
             </article>
 
             <article>
-                <h3>jQuery Animate</h3>
+                <h3>Slide Element</h3>
                 <p class="steps">Step</p>
                 <p class="note">Note</p>                
                 <pre>
@@ -100,7 +157,7 @@
             </article>
 
             <article>
-                <h3>jQuery Slide</h3>
+                <h3>Hide Element</h3>
                 <p class="steps">Step</p>
                 <p class="note">Note</p>                
                 <pre>
@@ -115,7 +172,7 @@
             </article>
 
             <article>
-                <h3>jQuery Hide</h3>
+                <h3>Fade Element</h3>
                 <p class="steps">Step</p>
                 <p class="note">Note</p>                
                 <pre>
@@ -130,7 +187,7 @@
             </article>
 
             <article>
-                <h3>jQuery ...</h3>
+                <h3>Combine Animations</h3>
                 <p class="steps">Step</p>
                 <p class="note">Note</p>                
                 <pre>
